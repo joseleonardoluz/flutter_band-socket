@@ -20,11 +20,11 @@ class Band {
   factory Band.fromMap(Map<String, dynamic> obj)
 
   => Band(
-    id: obj['id'],
-    name: obj['name'],
-    votes: obj['votes'],
-    episodio: obj['episodio'],
-    fecha: obj['fecha'],
-    duration: obj['duracion'],
+    id: obj.containsKey('id') ? obj['id']: 'no-id',
+    name: obj.containsKey('name') ? obj['name']: 'no-name',
+    votes: obj.containsKey('votes') ? obj['votes']: 'no-votes',
+    episodio: obj.containsKey('episodio') ? obj['episodio']: 'no-episodio',
+    fecha: obj.containsKey('fecha') ? obj['fecha']: 'no-fecha',
+    duration: obj.containsKey('fecha') ? obj['fecha']: 'no-fecha',
   );
 }
